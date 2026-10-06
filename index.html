@@ -17,12 +17,17 @@
 
     <section class="addFood">
       <form id="agregarComida">
-        <label>Nombre de la comida</label>
-       <input type="text"  id = "nombre" placeholder="Nombre de la comida">
+        <h2>Agregar Comida</h2>
+        <label for="nombre">Nombre de la comida</label>
+       <input type="text"  id = "nombre" placeholder="Nombre de la comida" required>
 
-       <label></label>
+       <label for="categoria">Categoria de la comida</label>
+       <input type="text" id="categoria" placeholder="Categoria de la comida">
 
-       <button type="submit"></button>
+       <label for="provincia">Provincia de la comida</label>
+       <input type="text" id="provincia" placeholder="Provincia de la comida">
+
+       <button type="submit">Agregar</button>
 
       </form>
     </section>
