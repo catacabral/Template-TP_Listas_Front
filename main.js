@@ -15,8 +15,8 @@ fetch('./data/comidas-extended.json')          // Ruta al archivo JSON
 
 let comidas = [];
 
-const comidaContainer = document.getElementById('comidaContainer');
-const formComidaNueva = document.getElementById("agregarComida")
+const comidaContainer = document.getElementById("comidaContainer");
+const formComidaNueva = document.getElementById("agregarComida");
 
 
 function mostrarComidasConForEach (lista) {
@@ -43,9 +43,9 @@ function mostrarComidasConForEach (lista) {
 
 }
 
-mostrarComidasConForEach();
 
-const agregarComidaForm = document.getElementById("agregarComidaForm")
+
+const agregarComidaForm = document.getElementById("agregarComida")
 
 formComidaNueva.addEventListener("submit", (e) => {
   
@@ -62,7 +62,7 @@ formComidaNueva.addEventListener("submit", (e) => {
 
     comidas.push(nuevaComida)
 
-    mostrarComidasConForEach();
+    mostrarComidasConForEach(comidas);
   
     formComidaNueva.reset()
 
@@ -75,10 +75,10 @@ const filtroProvincia = document.getElementById("filtroProvincia")
  function filtrar(){
   const comidasFiltradas = comidas.filter( comida => {
     return comida.categoria.includes(filtroCategoria.value)
-       && comida.provincia.includes(filtroProvincia.value)
-  })
+       && comida.provincia.includes(filtroProvincia.value);
+  });
 
-  mostrarComidasConForEach(comidasFiltradas)
+  mostrarComidasConForEach(comidasFiltradas);
 
  }
 
