@@ -12,10 +12,6 @@
       
       <select id="filtroCategoria">
         <option value="">Todas las categorías</option>
-        <option value="Parrilla">Parrilla</option>
-        <option value="Horno">Horno</option>
-        <option value="Guiso">Guiso</option>
-        <option value="Frito">Frito</option>
       </select>
 
       <select id="filtroProvincia">
@@ -49,7 +45,10 @@
        <input type="text" id="provincia" placeholder="Provincia de la comida">
 
        <label for="ingredientes">Ingredientes de la comida</label>
-       <input type="text" id="ingredientes" placeholder="Ingredientes de la comida">
+       <div class="contenedor-ingredientes">
+         <input type="text" class="ingrediente" id="ingredientes" placeholder="Ingredientes de la comida" required>
+      </div>
+      <button type="button" id="agregarIngrediente">Agregar Ingreediente</button>
 
        <button type="submit">Agregar</button>
 
