@@ -52,12 +52,19 @@ formComidaNueva.addEventListener("submit", (e) => {
   
   e.preventDefault()
   alert("Comida nueva recibida: " + e.target.nombre.value)
+
+  const ingredientesInputs = document.querySelectorAll(".ingrediente");
+  let ingredientes = []
   
+ ingredientesInputs.forEach(input => {
+  ingredientes.push(input.value);
+ })
+
   let nuevaComida = {
     nombre: e.target.nombre.value,
     categoria: e.target.categoria.value,
     provincia: e.target.provincia.value,
-    ingredientes: e.target.ingredientes.value.split(",")
+    ingredientes: ingredientes
 
     }
 
@@ -102,8 +109,6 @@ buscador.addEventListener("input", buscar)
 
 function actualizarFiltro(){
 
-  filtroCategoria.innerHTML += `<option value="">Todas las categorias</option>`
-
   let categorias = [];
 
   comidas.forEach(comida => {
@@ -113,7 +118,7 @@ function actualizarFiltro(){
   })
 
   categorias.forEach(categoria => {
-    filtroCategoria.innerHTML += `<option value="${categoria}">${cattegoria}</option>`
+    filtroCategoria.innerHTML += `<option value="${categoria}">${categoria}</option>`
   })
 
 }
@@ -129,6 +134,6 @@ const ingredientesContainer = document.querySelector(".contenedor-ingredientes")
 
 agregarIngredientebtn.addEventListener("click", (e) =>{
 
-  ingredientesContainer.innerHTML +=   `<input type="text" class="ingrediente" placeholder="Un ingrediente por box" requiered>`
+  ingredientesContainer.innerHTML +=   `<input type="text" class="ingrediente" placeholder="Un ingrediente por box" required>`
 })
 
