@@ -59,4 +59,66 @@ body{
 
 .card .categoria {
   color: #A76034;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card ul{
+margin-top: 8px;
+padding-left: 18px;
+border-top: 1px dashed #e8e2da;
+padding-top: 12px;
+color: #7a6e67;
+}
+
+.card li{
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.filtros input{
+  font-family: inherit;
+  font-size: 15px;
+  padding: 10px 14px;
+  border: 3px solid #e8e2da;
+  border-radius: 8px;
+  background-color: #fbf9f6;
+  color: #3e2723;
+}
+
+.filtros select{
+  font-family: inherit;
+  font-size: 15px;
+  padding: 10px 14px;
+  border: 3px solid #e8e2da;
+  border-radius: 8px;
+  background-color: #fbf9f6;
+  color: #3e2723;
+}
+
+.addFood{
+  background-color: #ffffff;
+  border: 1px solid #e8e2da;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.addFood form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.addFood label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7a6e67;
+}
+
+.contenedor-ingredientes{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
